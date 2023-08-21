@@ -1,0 +1,10 @@
+-   First we need a DataBase which can have details of location of user, last refresh time, current remaining Likes etc
+-   There are some cases where user change Time at his device and it actually increase the time in app too (I have seen this in CandyCrush), So to prevent it we need to use Location Wise time not users device time.
+-   It's sure we need to do CRON job according to country's timezone to reset the remaining likes count
+-   We need to use some sort of caching or indexing mechanism which allow crawler to retrive or updating user's Data
+-   When it come's to scalability we can use load balancing method to distribute request to multiple servers rather than forcing single server to do heavy task
+-   We can distribute users depends upon there locations, and make different database for them at a datacentre near there location
+-   We need to be sure to keep track of all the processing, so need to implement a logger or monitoring device which gives a concrete data after the cron job
+-   If it's required make a cron job for limited users from a distribution part which can help us to see if the last cron job was successful or not
+
+I Think by using today's modern tools and best practice we can achieve scalable backend server
